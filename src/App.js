@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import DisaplyEntries from './Components/DisplayEntries/DisplayEntries';
 
 function App() {
+
+  const[entries, setEntries] = useState([{Weight: 176, Date: '11-3-2021'}, {Weight: 140, Date: '11-3-2021'}])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <DisaplyEntries parentEntries={entries}></DisaplyEntries>
     </div>
   );
 }
